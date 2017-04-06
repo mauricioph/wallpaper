@@ -1,0 +1,35 @@
+#!/bin/bash
+# Version 1.2
+# Copyright 2016 Maurice
+#
+
+while [ 1 ]
+ do btl=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | cut -d " " -f 15)
+	btls=$(echo ${btl} | sed 's/%//g')
+	stado=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 |  grep state | sed 's/  //g' | cut -d " " -f 2)
+
+	case $stado in
+		charging) echo "Charging $btl"
+		sleep 30
+		clear
+		;;
+	
+		fully-charged) echo "Full $btl"
+		sleep 30
+		clear
+		;;
+	
+		discharging) echo "Discharging $btl"
+			if [ "${btls}" -le "10" ]
+			then notify-send "Low battery $btl" -i battery
+				sleep 30
+			fi
+		sleep 30
+		clear
+		;;
+	
+		*) echo "Something went wrong, check the code"
+		break;;
+	esac
+
+ done
