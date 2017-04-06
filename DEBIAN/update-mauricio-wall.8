@@ -1,0 +1,25 @@
+.TH UPDATE-HOOGLE 8 "September 2012" "Debian GNU/Linux"
+.SH "NAME"
+.LP
+update-hoogle \- Update hoogle database
+.SH "SYNOPSIS"
+.LP
+update-hoogle
+.SH "DESCRIPTION"
+.LP
+This program creates hoogle database for Debian system.
+It collects haddock documents, then create the database for gwallpaper command.
+.PP
+This program is called by mauricio's wallpaper postinst script automatically.
+But you can run this program manually too, if the database broken.
+.SH "FILES"
+.TP
+.B /usr/local/bin/gwallpaper
+Here is gwallpapers files.
+They are updated by update-mauricio-wall command.
+.SH "AUTHOR"
+.LP
+Mauricio Luis de Medeiros <jesusmlmph@gmail.com>
+.SH "SEE ALSO"
+.LP
+mauricio-wall(1), deb-triggers(5)
