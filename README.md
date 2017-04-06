@@ -8,9 +8,10 @@ clone the repository with the command:
 ```
 git clone https://github.com/mauricioph/wallpaper.git
 ```
-Give the right permission to the post install file
+Give the right permission to the post install file and the gwallpaper
 ``` 
-sudo chmod 0555 wallpaper/DEBIAN/postinst
+sudo chmod 0555 wallpaper/DEBIAN/postinst wallpaper/usr/local/bin/gwallpaper 
+
 ```
 Build the package
 ```
