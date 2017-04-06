@@ -1,11 +1,11 @@
-# wallpaper
+# Wallpaper
 
 This is a Debian Package with more than 350 wallpapers and a script to change the wallpaper according to a defined time. 
 The default time is 60 seconds. It is not a debian binary, but it is ready for packaging... If you have any other distro that doesn't support deb packages you should just clone the repository and move the folders from here to the root folder.
 
 # Debian way
 clone the repository with the command:
-git clone https://github.com/mauricioph/wallpaper.git
+## git clone https://github.com/mauricioph/wallpaper.git
 
 Give the right permission to the post install file
 sudo chmod 0555 wallpaper/DEBIAN/postinst
