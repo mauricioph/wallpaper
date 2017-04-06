@@ -5,34 +5,42 @@ The default time is 60 seconds. It is not a debian binary, but it is ready for p
 
 # Debian way
 clone the repository with the command:
-## git clone https://github.com/mauricioph/wallpaper.git
-
+```
+git clone https://github.com/mauricioph/wallpaper.git
+```
 Give the right permission to the post install file
+``` 
 sudo chmod 0555 wallpaper/DEBIAN/postinst
-
+```
 Build the package
+```
 dpkg-deb --build wallpaper
+```
 
 Install the package
+```
 dpkg --install wallpaper.deb
-
-or gdebi-gtk wallpaper.deb
-  
+```
+or 
+```
+gdebi-gtk wallpaper.deb
+```
 To call the script type gwallpaper. If there is any permission problems the script is located at /usr/local/bin/gwallpaper
 
 # Other distros way
 If your distro does not support deb package follow this instructions.
 
 clone the repository with the command:
+```
 git clone https://github.com/mauricioph/wallpaper.git
-
+```
 go to the repository folder
-
+```
 cd wallpaper/
-
+```
 copy all the files in the usr folder to the root folder
-
+```
 sudo mv usr/ /
-
+```
 call the script by typing 
 gwallpaper
