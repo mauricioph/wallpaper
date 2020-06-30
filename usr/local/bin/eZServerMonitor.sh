@@ -1,0 +1,1 @@
+/opt/repositories/ezservermonitor-sh/eZServerMonitor.sh
